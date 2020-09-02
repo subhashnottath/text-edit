@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Text Editor</title>
+    <style>
+        textarea {
+            border:1px solid #999999;
+            white-space: pre;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td style="background-color:#358ac4;">
+                <input id="fileChoice" type="file" style="display:none;" onchange="showFile(this)"/>
+                <input type="button" value="Open File" onclick="chooseFile()"/>
+                <input type="button" value="Save File" onclick="download()"/>
+                <label for="pageWidth">Width</label>
+                <input id="pageWidth" type="number" min="10" max="500" value="80" size="3"/>
+            </td>
+            <td style="background-color:#3b9cdd;">
+                <input type="radio" id="greedy" name="format" value="greedy" checked>
+                <label for="greedy">Format Greedy</label>
+                <input type="radio" id="dp" name="format" value="dp">
+                <label for="dp">Format DP</label>
+            </td>
+            <td style="background-color:#68bdf7">
+                <input type="radio" id="left" name="align" value="left" checked>
+                <label for="left">Align Left</label>
+                <input type="radio" id="right" name="align" value="right">
+                <label for="right">Align Right</label>
+                <input type="radio" id="justified" name="align" value="justified">
+                <label for="justified">Align Justified</label>
+            </td>
+            <td style="background-color:#a1d6fa">
+                <label id="fileLabel">Currently Editing : ...</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <textarea id="editor" rows=30></textarea>
+            </td>
+        </tr>        <tr>
+            <td>
+                <input type="button" value="Process" onclick="process()">
+            </td>
+        </tr>
+    </table>
+>
+<script src="editor.js"></script>
+</body>
+</html>
