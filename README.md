@@ -20,6 +20,7 @@
 3. Async communication to backend through simple js
 
 ### Algorithms
+
 1. Text justification
     - Greedy
     - Dynamic Programming
