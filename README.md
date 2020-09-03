@@ -16,7 +16,7 @@
 ### Technologies used
 
 1. Simple html UI
-2. Spring boot webflux backend
+2. Java backend (Spring boot webflux)
 3. Async communication to backend through simple js
 
 ### Algorithms
